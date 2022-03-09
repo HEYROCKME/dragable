@@ -5,19 +5,43 @@
 }
 
 #box {
-  width: 200px;
-  height: 200px;
+  left: 20px;
+  top: 20px;
   background-color: salmon;
-  cursor: move;
-  position: absolute;
 }
 
 #box2 {
-  width: 200px;
-  height: 200px;
   left: 200px;
   top: 200px;
   background-color: goldenrod;
+}
+
+.box {
+  width: 300px;
+  height: 400px;
   cursor: move;
   position: absolute;
+
+  border: solid 6px white;
+}
+
+.box header {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  padding: 0 1em;
+}
+
+.box header p {
+  color: darkblue;
+  width: 100%;
+}
+.box header button {
+  text-align: center;
+  height: 2em;
+  width: 2em;
+  border: solid 3px rgb(197, 186, 186);
+  background-color: white;
 }
