@@ -3,4 +3,5 @@
   height: 200px;
   background-color: salmon;
   cursor: move;
+  position: absolute;
 }
