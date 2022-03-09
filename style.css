@@ -1,3 +1,7 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 #container {
   width: 100vw;
   height: 100vh;
@@ -31,17 +35,29 @@
   flex-direction: row;
   justify-items: center;
   align-items: center;
-  padding: 0 1em;
+  padding: 0 0.5em;
 }
 
 .box header p {
-  color: darkblue;
+  color: rgb(84, 82, 82);
   width: 100%;
+  font-weight: bold;
 }
 .box header button {
   text-align: center;
   height: 2em;
   width: 2em;
   border: solid 3px rgb(197, 186, 186);
+  color: rgb(197, 186, 186);
   background-color: white;
+  cursor: pointer;
+  margin: 0;
+}
+
+.box article {
+  padding: 0.3em 0.875em;
+}
+
+.active {
+  border: 6px solid salmon;
 }

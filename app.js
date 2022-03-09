@@ -25,7 +25,7 @@ const clientPosition = () => {}
 const HandleMouseBtn = (e) => {
   e.preventDefault
   let targetId = e.target.id
-  if (e.target.id != 'container') {
+  if (e.target.id && targetId != 'container') {
     e.type === 'mousedown' && !moveActive ? (moveActive = true) : null
 
     e.type === 'mousemove' && moveActive
@@ -36,6 +36,13 @@ const HandleMouseBtn = (e) => {
   } else return (moveActive = false)
 }
 
+const HandleOver = (theEventOff) => {
+  theEventOff.target.className.includes('box')
+    ? theEventOff.target.classList.add('active')
+    : theEventOff.target.classList.remove('active')
+}
+
 body.addEventListener('mousedown', (e) => HandleMouseBtn(e))
 body.addEventListener('mouseup', (e) => HandleMouseBtn(e))
 body.addEventListener('mousemove', (e) => HandleMouseBtn(e))
+body.addEventListener('mouseover', (e) => HandleOver(e))
