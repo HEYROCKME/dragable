@@ -1,4 +1,10 @@
-.box {
+#container {
+  width: 100vw;
+  height: 100vh;
+  background-color: aquamarine;
+}
+
+#box {
   width: 200px;
   height: 200px;
   background-color: salmon;
