@@ -2,6 +2,7 @@
 
 let box = document.getElementById('box')
 let container = document.getElementById('container')
+let body = document.body
 let initX = 0,
   initY = 0,
   newX,
@@ -11,32 +12,37 @@ let moveActive = false
 
 const handleClick = (e) => {}
 
-const changeBoxPosition = (name, posX, posY) => {
-  console.log(name)
-  document.getElementById(name).style.left = posX + 'px'
-  document.getElementById(name).style.top = posY + 'px'
-
-  //   moveActive = false
+const changeBoxPosition = (target, posX, posY) => {
+  document.getElementById(target.id).style.left =
+    posX - target.clientWidth / 2 + 'px'
+  document.getElementById(target.id).style.top =
+    posY - target.clientHeight / 2 + 'px'
+  console.log(target, posX, posY)
 }
 
+const clientPosition = () => {}
+
 const HandleMouseBtn = (e) => {
-  console.log(e.target.id, moveActive)
   e.preventDefault
   let targetId = e.target.id
-  if (e.target.id != 'container') {
+  if (e.target.id && targetId != 'container') {
     e.type === 'mousedown' && !moveActive ? (moveActive = true) : null
-    //   e.type === 'click' && moveActive ? (moveActive = false) : null
 
     e.type === 'mousemove' && moveActive
-      ? changeBoxPosition(targetId, e.clientX, e.clientY)
+      ? changeBoxPosition(e.target, e.clientX, e.clientY)
       : ''
 
     e.type === 'mouseup' && moveActive ? (moveActive = false) : null
   } else return (moveActive = false)
 }
 
-// box.addEventListener('click', (e) => handleClick(e))
-// container.addEventListener('click', (e) => handleClick(e))
-container.addEventListener('mousedown', (e) => HandleMouseBtn(e))
-container.addEventListener('mouseup', (e) => HandleMouseBtn(e))
-container.addEventListener('mousemove', (e) => HandleMouseBtn(e))
+const HandleOver = (theEventOff) => {
+  theEventOff.target.className.includes('box')
+    ? theEventOff.target.classList.add('active')
+    : theEventOff.target.classList.remove('active')
+}
+
+body.addEventListener('mousedown', (e) => HandleMouseBtn(e))
+body.addEventListener('mouseup', (e) => HandleMouseBtn(e))
+body.addEventListener('mousemove', (e) => HandleMouseBtn(e))
+body.addEventListener('mouseover', (e) => HandleOver(e))
