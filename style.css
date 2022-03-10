@@ -2,24 +2,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.box {
-  width: 300px;
-  height: 400px;
-  /* cursor: move; */
-  position: absolute;
-
-  border: solid 6px white;
-}
-
-.box header {
-  background-color: white;
-  display: flex;
-  flex-direction: row;
-  justify-items: center;
-  align-items: center;
-  padding: 0 0.5em;
-}
-
 #container {
   width: 100vw;
   height: 100vh;
@@ -41,7 +23,7 @@ body {
 .box {
   width: 300px;
   height: 400px;
-  cursor: move;
+
   position: absolute;
 
   border: solid 6px white;
@@ -51,18 +33,23 @@ body {
   background-color: white;
   display: flex;
   flex-direction: row;
-  justify-items: center;
+  justify-content: space-between;
   align-items: center;
   padding: 0 0.5em;
+  cursor: move;
+  width: 95%;
 }
 
 .box header p {
   color: rgb(84, 82, 82);
-  width: 100%;
+  max-width: 75px;
   font-weight: bold;
+  justify-self: flex-start;
+  /* border: solid 2px green; */
 }
 .box header button {
   text-align: center;
+  justify-self: flex-end;
   height: 2em;
   width: 2em;
   border: solid 3px rgb(197, 186, 186);
@@ -102,4 +89,14 @@ body {
 
 .active {
   border: 6px solid salmon;
+}
+
+.noselect {
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
