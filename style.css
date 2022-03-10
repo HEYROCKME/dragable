@@ -2,6 +2,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+img {
+  width: 100%;
+}
+
 #container {
   width: 100vw;
   height: 100vh;
@@ -17,12 +21,12 @@ body {
 #box2 {
   left: 200px;
   top: 200px;
-  background-color: goldenrod;
+  background-color: gold;
 }
 
 .box {
   width: 300px;
-  height: 400px;
+  min-height: 400px;
 
   position: absolute;
 
