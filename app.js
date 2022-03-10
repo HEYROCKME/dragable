@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 // get the box
 
 let box = document.getElementById('box')
@@ -48,4 +46,3 @@ body.addEventListener('mousedown', (e) => HandleMouseBtn(e))
 body.addEventListener('mouseup', (e) => HandleMouseBtn(e))
 body.addEventListener('mousemove', (e) => HandleMouseBtn(e))
 body.addEventListener('mouseover', (e) => HandleOver(e))
->>>>>>> Stashed changes
