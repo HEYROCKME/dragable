@@ -37,7 +37,7 @@ const HandleMouseBtn = (e) => {
 }
 
 const HandleOver = (theEventOff) => {
-  theEventOff.target.className.includes('movable')
+  theEventOff.target.className.includes('box')
     ? theEventOff.target.classList.add('active')
     : theEventOff.target.classList.remove('active')
 }
