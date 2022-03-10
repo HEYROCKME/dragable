@@ -23,7 +23,7 @@ const changeBoxPosition = (target, posX, posY) => {
   )
 
   element.style.left = `${posX - element.clientWidth / 2}px`
-  element.style.top = `${posY - element.clientHeight / 20}px`
+  element.style.top = `${posY - element.clientHeight / 40}px`
   console.log(element)
 }
 

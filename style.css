@@ -1,20 +1,52 @@
+html * {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background-color: aquamarine;
 }
 
 img {
   width: 100%;
 }
 
+h1 {
+  font-size: 4.5rem;
+  /* margin-top: 1em; */
+}
+
+.heading {
+  position: absolute;
+  left: 65%;
+
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .heading {
+    left: 38%;
+
+    top: 8%;
+  }
+}
+
 #container {
-  width: 100vw;
-  height: 100vh;
-  background-color: aquamarine;
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
 }
 
 #box {
   left: 20px;
-  top: 20px;
+  top: 160px;
   background-color: salmon;
 }
 
@@ -31,6 +63,10 @@ img {
   position: absolute;
 
   border: solid 6px white;
+  border-radius: 3px;
+}
+.box:focus-within {
+  border-color: salmon;
 }
 
 .box header {
@@ -39,9 +75,9 @@ img {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0.5em;
+  padding: 0.5em 0.5em;
   cursor: move;
-  width: 95%;
+  width: 100%;
 }
 
 .box header p {
@@ -63,8 +99,21 @@ img {
   margin: 0;
 }
 
+.box h2 {
+  color: rgb(20, 20, 20);
+  padding: 0.5em 0;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
 .box article {
-  padding: 0.3em 0.875em;
+  padding: 0.5em 0.875em 1em;
+  margin-bottom: 2em;
+}
+
+.content {
+  padding: 1em 0;
+  line-height: 1.4;
 }
 
 .active {
@@ -78,6 +127,7 @@ img {
 }
 .box header button {
   text-align: center;
+  font-weight: bold;
   height: 2em;
   width: 2em;
   border: solid 3px rgb(197, 186, 186);
@@ -85,6 +135,12 @@ img {
   background-color: white;
   cursor: pointer;
   margin: 0;
+}
+
+.box header button:hover,
+button:focus {
+  color: salmon;
+  border-color: salmon;
 }
 
 .box article {
